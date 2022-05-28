@@ -7,7 +7,7 @@ For installing softwares needed for running present pipeline one can install sof
 
 eg.
 
-conda install -c bioconda trinity
+conda install -c bioconda trinity \n
 conda install -c bioconda bpipe
 conda install -c bioconda stringtie
 conda install -c bioconda hisat2
