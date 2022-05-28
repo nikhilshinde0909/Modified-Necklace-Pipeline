@@ -7,7 +7,7 @@ VERSION="1.11"
 
 //option strings to pass to tools
 
-blat_options="-minScore=200 -minIdentity=70 -threads="
+blat_options="-minScore=200 -minIdentity=98 -threads="
 blat_related_options="-t=dnax -q=prot -minScore=200 -maxIntron=0 -threads="
 scaffold_genes=false
 de_novo_assembly_file=""
