@@ -36,21 +36,22 @@ remove_clusters_match="/opt/data/home/nikhil/mod_necklace/tools/bin/remove_clust
 
 # De novo assembling the transcripts from large number of RNASeq datasets
 For de novo assembling transcripts from large number of RNASeq datasets we have script called 'denovo.groovy' which is further depends on subscript 'de_novo_assembly.groovy' under bpipe_stages folder. However like a necklace the present pipeline also automated with bpipe.
-
+eg.
 {path_to_bpipe}/bpipe run -n 16 ~/mod_necklace/denovo.groovy data/data.txt
 
 # Reference guided transcripts assembly RNASeq datasets
 For reference guided transcript assembly, we have script called 'genome_guided.groovy' which is further depends on subscript 'genome_guided_assembly.groovy' and 'build_genome_superTranscriptome.groovy' under bpipe_stages folder. 
-
+eg.
 {path_to_bpipe}/bpipe run -n 16 ~/mod_necklace/genome_guided.groovy data/data.txt
 
 # Final superTranscript construction 
 For constructing superTranscripts by integrating above two different approaches we have to copy files 'de_novo_assembly.fasta' and 'genome_superT.fasta' in working directory. then you can run script called 'cluster+lace.groovy' to construct superTranscripts as follows:
-
+eg
 {path_to_bpipe}/bpipe run -n 16 ~/mod_necklace/cluster+lace.groovy data/data.txt
 
 Note:
 The path for 'proteins_related_species' would be same as in 'data.txt' file if you are not changing working directory or one can give full path for the same as follows to avoid error
+
 eg.
 proteins_related_species="/opt/data/home/nikhil/superTranscriptome/data/Sorghum_bicolor_all.pep.fa"
 
