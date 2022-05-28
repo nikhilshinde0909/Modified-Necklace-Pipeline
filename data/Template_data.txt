@@ -1,0 +1,13 @@
+// sequencing data
+reads_R1="data/SRR1_1.fastq.gz,data/SRR2_1.fastq.gz,data/SRR3_1.fastq.gz,..., SRRn_1.fastq.gz"
+
+reads_R2="data/SRR1_2.fastq.gz,data/SRR2_2.fastq.gz,data/SRR3_2.fastq.gz,..., SRRn_2.fastq.gz"
+
+//The genome and annotation
+annotation="data/organism.genes.gtf"
+genome="data/organism.dna.toplevel.fa"
+
+//The genome and annotation of a related species
+annotation_related_species="data/rel_sp.genes.gtf"
+genome_related_species="data/rel_sp.dna.toplevel.fa"
+proteins_related_species="data/rel_sp_proteins.fa"
