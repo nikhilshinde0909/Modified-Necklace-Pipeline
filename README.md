@@ -53,7 +53,6 @@ Note:
 The path for 'proteins_related_species' would be same as in 'data.txt' file if you are not changing working directory or one can give full path for the same as follows to avoid error
 
 eg.
-
 proteins_related_species="/opt/data/home/nikhil/superTranscriptome/data/Sorghum_bicolor_all.pep.fa"
 
 
