@@ -7,17 +7,17 @@ For installing softwares needed for running present pipeline one can install sof
 
 eg.
 
-conda install -c bioconda trinity \n
-conda install -c bioconda bpipe
-conda install -c bioconda stringtie
-conda install -c bioconda hisat2
-conda install -c bioconda bowtie
-conda install -c bioconda bowtie2
-conda install -c bioconda samtools
-conda install -c bioconda gffread
-conda install -c bioconda lace
-conda install -c bioconda pblat
-conda install -c bioconda blat
+conda install -c bioconda trinity\
+conda install -c bioconda bpipe\
+conda install -c bioconda stringtie\
+conda install -c bioconda hisat2\
+conda install -c bioconda bowtie\
+conda install -c bioconda bowtie2\
+conda install -c bioconda samtools\
+conda install -c bioconda gffread\
+conda install -c bioconda lace\
+conda install -c bioconda pblat\
+conda install -c bioconda blat\
 
 
 or 
