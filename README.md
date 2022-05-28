@@ -31,8 +31,8 @@ the other tools used by pipeline such as chimera braker, make blocks, gtf2flatgt
 Finally you have to edit the path for installed softwares in file {mod_necklace}/tools.groovy 
 
 eg.\
-bpipe="/opt/data/home/nikhil/anaconda3/bin/bpipe"
-hisat2="/opt/data/home/nikhil/anaconda3/bin/hisat2"
+bpipe="/opt/data/home/nikhil/anaconda3/bin/bpipe"\
+hisat2="/opt/data/home/nikhil/anaconda3/bin/hisat2"\
 remove_clusters_match="/opt/data/home/nikhil/mod_necklace/tools/bin/remove_clusters_match"
 
 
