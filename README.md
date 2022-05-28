@@ -2,6 +2,11 @@
 
 The existing Necklace pipeline for superTranscriptome construction by combining reference guided and de novo transcriptome assembly has been modified in such way to construct induvidual reference guided assembly and de novo transcriptome assembly for proccessing large number of RNASeq datasets(108) in sorghum. The assemblies from above two different approaches were used to cluster the transcripts and finally to construct super transcripts by using Lace.
 
+# Downloading pipeline 
+To make a local copy of a Modified_Necklace_Pipeline, You can use 'git' command as follows:\
+
+git clone https://github.com/sd1172/Modified_Necklace_Pipeline.git
+
 # Installing softwares
 For installing softwares needed for running present pipeline one can install softwares with Anaconda by using conda command in current conda environment as follows
 
