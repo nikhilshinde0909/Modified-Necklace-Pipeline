@@ -1,48 +1,39 @@
 # Modified_Necklace_Pipeline
 
-The existing Necklace pipeline https://github.com/Oshlack/necklace constructs superTranscriptoms by combining reference guided and de novo transcriptome assembly. Which has been splitted to construct induvidual reference guided assembly and de novo transcriptome assembly for proccessing large number of RNASeq datasets(108) in sorghum. The assemblies from above two different approaches were used to cluster the transcripts and finally to construct super transcripts by using Lace.
+The existing Necklace pipeline https://github.com/Oshlack/necklace constructs superTranscriptoms by combining reference guided and de novo transcriptome assembly. Which has been splitted to construct induvidual reference guided assembly and de novo transcriptome assembly for proccessing large number of RNA-Seq datasets(275) in sorghum. The assemblies from above two different approaches were used to cluster the transcripts and finally to construct super transcripts by using Lace.
 
 # Downloading pipeline 
-To make a local copy of a Modified_Necklace_Pipeline, You can use 'git' command as follows:
+To clone Modified_Necklace_Pipeline to your local environment, You can use 'git' command as follows:
 
 git clone https://github.com/nikhilshinde0909/Modified_Necklace_Pipeline.git
 
 # Installing softwares
-For installing softwares needed for running present pipeline one can install softwares with Anaconda by using conda command in current conda environment as follows
+For software installation you can install softwares manually or with conda as follows
 
 eg.\
 conda install -c bioconda trinity\
-conda install -c bioconda bpipe\
-conda install -c bioconda stringtie\
-conda install -c bioconda hisat2\
-conda install -c bioconda bowtie\
-conda install -c bioconda bowtie2\
-conda install -c bioconda samtools\
-conda install -c bioconda gffread\
-conda install -c bioconda lace\
-conda install -c bioconda pblat\
-conda install -c bioconda blat
-
 
 or 
-One can create new conda environment for running pipeline as follows 
 
-conda create env -n necklace -c bioconda lace
+You can also create conda environment for executing pipeline as follows 
 
-and install the rest of the softwares one by one  as given above
+conda env create -f environment.yml
 
-the other tools used by pipeline such as chimera braker, make blocks, gtf2flatgtf etc. will be present in form of pre-compiled bineries and will be available in directory {Path to mod necklace}/tools/bin/
-
-Finally you have to edit the path for installed softwares in file {mod_necklace}/tools.groovy 
+once all softwares are installed you need to add path for the same in file called tools.groovy
 
 eg.\
 bpipe="/opt/data/home/nikhil/anaconda3/bin/bpipe"\
-hisat2="/opt/data/home/nikhil/anaconda3/bin/hisat2"\
+
+the other tools such as chimera braker, make blocks, gtf2flatgtf etc. will be available as a pre-compiled bineries in the directory {Path to mod necklace}/tools/bin/
+
+You need to add the path for the same in file called tools.groovy 
+
+eg.\
 remove_clusters_match="/opt/data/home/nikhil/mod_necklace/tools/bin/remove_clusters_match"
 
 
 # De novo assembling the transcripts from large number of RNASeq datasets
-For de novo assembling transcripts from large number of RNASeq datasets we have script called 'denovo.groovy' which is further depends on subscript 'de_novo_assembly.groovy' under bpipe_stages folder. However like a necklace the present pipeline also automated with bpipe.
+For de novo assembling transcripts from large number of RNASeq datasets we have script called 'denovo.groovy' which is further depends on subscript 'de_novo_assembly.groovy' under bpipe_stages folder. The present pipeline also automated with bpipe similarly like necklace.
 
 eg.\
 {path_to_bpipe}/bpipe run -n 16 ~/mod_necklace/denovo.groovy data/data.txt
