@@ -11,7 +11,7 @@ git clone https://github.com/nikhilshinde0909/Modified_Necklace_Pipeline.git
 For software installation you can install softwares manually or with conda as follows
 
 eg.\
-conda install -c bioconda trinity\
+conda install -c bioconda trinity
 
 or 
 
@@ -22,7 +22,7 @@ conda env create -f environment.yml
 once all softwares are installed you need to add path for the same in file called tools.groovy
 
 eg.\
-bpipe="/opt/data/home/nikhil/anaconda3/bin/bpipe"\
+bpipe="/opt/data/home/nikhil/anaconda3/bin/bpipe"
 
 the other tools such as chimera braker, make blocks, gtf2flatgtf etc. will be available as a pre-compiled bineries in the directory {Path to mod necklace}/tools/bin/
 
