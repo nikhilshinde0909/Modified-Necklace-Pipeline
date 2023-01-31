@@ -1,6 +1,6 @@
 # Modified_Necklace_Pipeline
 
-The existing Necklace pipeline https://github.com/Oshlack/necklace constructs superTranscripts by combining reference guided and de novo transcriptome assembly. Which is quite time and memory consuming approach when applied to large number of transcriptomics datasets, since all stages are parallely running, although it produces ouputs from superTranscripts assembly to expression counts. In present investigation we maked modified version of the same and splitted the assembly steeps into three parts namely reference guided assembly, de novo transcriptome assembly and clustering this will yield final superTranscripts by using Lace.
+The existing Necklace pipeline https://github.com/Oshlack/necklace constructs superTranscripts by combining reference guided and de novo transcriptome assembly. Which is quite time and memory consuming approach when applied to large number of transcriptomics datasets, since all stages are parallely running, although it produces ouputs from superTranscripts assembly to expression counts. In present investigation we maked modified version of the same and splitted the assembly steeps into three parts namely reference guided assembly, de novo transcriptome assembly and clustering this will yield final superTranscripts by using Lace. If one wants to go for gene expression count, can perform it immidiately after the reference guided and de novo transcriptome assembly.
 
 # Downloading pipeline 
 To clone Modified_Necklace_Pipeline to your local environment, You can use 'git' command as follows:
@@ -56,4 +56,9 @@ The path for 'proteins_related_species' would be same as in 'data.txt' file if y
 eg.\
 proteins_related_species="/opt/data/home/nikhil/superTranscriptome/data/Sorghum_bicolor_all.pep.fa"
 
+# Final superTranscript construction along with expression counts
+The superTranscripts will be constructs by integrating above two assembly approaches we have to copy files 'de_novo_assembly.fasta' and 'genome_superT.fasta' in working directory. then you need to run script called 'cluster+lace+featureCounts.groovy' which will produce output for superTranscvripts and expression counts as follows:
+
+eg.\
+{path_to_bpipe}/bpipe run -n 16 ~/mod_necklace/cluster+lace+featureCounts.groovy data/data.txt
 
