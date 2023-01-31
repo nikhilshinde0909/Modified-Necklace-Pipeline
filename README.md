@@ -1,6 +1,6 @@
 # Modified_Necklace_Pipeline
 
-The existing Necklace pipeline https://github.com/Oshlack/necklace constructs superTranscriptoms by combining reference guided and de novo transcriptome assembly. Which has been splitted to construct induvidual reference guided assembly and de novo transcriptome assembly for proccessing large number of RNA-Seq datasets(275) in sorghum. The assemblies from above two different approaches were used to cluster the transcripts and finally to construct super transcripts by using Lace.
+The existing Necklace pipeline https://github.com/Oshlack/necklace constructs superTranscriptoms by combining reference guided and de novo transcriptome assembly. Which is time consuming approach when applied to large number of transcriptomics datasets, although it produces ouputs from superTranscripts assembly to expression counts. In present investigation we maked modified version of the same and splitted the assembly steeps into three parts namely reference guided assembly, de novo transcriptome assembly and clustering this will yield final superTranscripts by using Lace.
 
 # Downloading pipeline 
 To clone Modified_Necklace_Pipeline to your local environment, You can use 'git' command as follows:
