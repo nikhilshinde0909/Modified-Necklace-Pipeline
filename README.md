@@ -16,9 +16,10 @@ conda install -c bioconda trinity
 ```
 or 
 
-You can also create conda environment for executing pipeline as follows 
+You can also create and activate conda environment for executing pipeline as follows 
 ```
 conda env create -f environment.yml
+conda activate mod-necklace
 ```
 once all softwares are installed you need to add path for the same in file called tools.groovy
 
